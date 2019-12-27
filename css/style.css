@@ -395,9 +395,10 @@ section:nth-of-type(odd) {
 
 .header__nav li a {
   color: #333333;
+  display: block;
 }
 
-.header__nav li::after {
+.header__nav li a::after {
   content: '';
   display: block;
   width: 0;
@@ -406,7 +407,7 @@ section:nth-of-type(odd) {
   transition: width 0.3s ease-in-out;
 }
 
-.header__nav li:hover::after {
+.header__nav li a:hover::after {
   width: 100%;
 }
 
