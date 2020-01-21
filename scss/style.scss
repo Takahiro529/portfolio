@@ -287,6 +287,9 @@ section:nth-of-type(odd) {
       font-size: rem(40);
       margin-top: 10px;
     }
+    @include media(s) {
+      font-size: rem(50);
+    }
   }
 }
 

@@ -795,6 +795,9 @@ section:nth-of-type(odd) {
     z-index: 2;
     cursor: pointer;
   }
+  .top__text {
+    font-size: 3.125rem;
+  }
   .works__content {
     justify-content: left;
   }
