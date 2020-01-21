@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
     // エラーなし（全ての項目が入力されている）
     if ($err_msg == '') {
-        $to = 'admin@test.com'; // 管理者のメールアドレスなど送信先を指定
+        $to = 'taka3mail529@gmail.com'; // 管理者のメールアドレスなど送信先を指定
         $headers = "From: " . $email . "\r\n";
 
         // 本文の最後に名前を追加
