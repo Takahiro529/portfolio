@@ -585,7 +585,7 @@ section:nth-of-type(odd) {
   width: 20%;
 }
 
-.contact__form-item input[type=text], .contact__form-item input[type=email] {
+.contact__form-item input[type=text], .contact__form-item input[type=email], .contact__form-item input[type=subject] {
   width: 60%;
   padding: 3px;
   border: 1px solid rgba(0, 140, 255, 0.6);

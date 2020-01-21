@@ -423,7 +423,7 @@ section:nth-of-type(odd) {
     label {
       width: 20%;
     }
-    input[type=text], input[type=email] {
+    input[type=text], input[type=email], input[type=subject] {
       width: 60%;
       padding: 3px;
       border: 1px solid rgba(0, 140, 255, 0.6);

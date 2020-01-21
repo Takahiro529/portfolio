@@ -1,3 +1,53 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+    // POSTでのアクセスでない場合
+    $name = '';
+    $email = '';
+    $subject = '';
+    $message = '';
+    $err_msg = '';
+    $complete_msg = '';
+
+} else {
+    // フォームがサブミットされた場合（POST処理）
+    // 入力された値を取得する
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // エラーメッセージ・完了メッセージの用意
+    $err_msg = '';
+    $complete_msg = '';
+
+    // 空チェック
+    if ($name == '' || $email == '' || $subject == '' || $message == '') {
+        $err_msg = '全ての項目を入力してください。';
+    }
+
+    // エラーなし（全ての項目が入力されている）
+    if ($err_msg == '') {
+        $to = 'admin@test.com'; // 管理者のメールアドレスなど送信先を指定
+        $headers = "From: " . $email . "\r\n";
+
+        // 本文の最後に名前を追加
+        $message .= "\r\n\r\n" . $name;
+
+        // メール送信
+        mb_send_mail($to, $subject, $message, $headers);
+
+        // 完了メッセージ
+        $complete_msg = '送信されました！';
+
+        // 全てクリア
+        $name = '';
+        $email = '';
+        $subject = '';
+        $message = '';
+    }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -143,20 +193,24 @@
       <p class="contact__title title">CONTACT</p>
       <p class="contact__txt">連絡先</p>
       <p class="contact__mail-address">taka3mail529@gmail.com</p>
-      <form action="">
+      <form action="" method="post">
         <div class="contact__form-item">
           <label for="name">お名前</label>
-          <input type="text" name="name" placeholder="お名前をご入力ください">
+          <input type="text" name="name" placeholder="お名前">
         </div><!-- /.cantact__name -->
         <div class="contact__form-item">
           <label for="email">Email</label>
-          <input type="email" name="email" placeholder="メールアドレスをご入力ください">
+          <input type="email" name="email" placeholder="メールアドレス">
         </div><!-- /.contact__mail -->
         <div class="contact__form-item">
+          <label for="subject">件名</label>
+          <input type="subject" name="subject" placeholder="件名">
+        </div><!-- /.contact__subject -->
+        <div class="contact__form-item">
           <label for="message">お問い合わせ内容</label>
-          <textarea name="message" placeholder="お問い合わせ内容をご入力ください"></textarea>
+          <textarea name="message" placeholder="お問い合わせ内容"></textarea>
         </div><!-- /.contact__message -->
-        <input class="contact__submit" type="submit" value="確認画面へ">
+        <input class="contact__submit" type="submit" value="送信">
       </form>
     </div><!-- /.wrapper -->
   </section><!-- /.contact -->
