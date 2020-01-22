@@ -676,7 +676,7 @@ section:nth-of-type(odd) {
   }
   .top_btn span:nth-child(1) {
     top: 4px;
-    left: 5px;
+    left: 6px;
     width: 12px;
     transform: rotate(135deg);
   }
@@ -687,7 +687,7 @@ section:nth-of-type(odd) {
     transform: rotate(90deg);
   }
   .top_btn span:nth-child(3) {
-    top: 4px;
+    top: 5px;
     left: 14px;
     width: 12px;
     transform: rotate(45deg);
