@@ -324,8 +324,6 @@ section:nth-of-type(odd) {
     border-left: 2px solid rgba(0, 140, 255, 0.3);
   }
   &__image {
-    width: 100px;
-    height: 100px;
     display:-webkit-box;
   	display:-ms-flexbox;
     display: flex;
@@ -333,10 +331,9 @@ section:nth-of-type(odd) {
 	  -ms-flex-pack: center;
     justify-content: center;
     margin: 0 auto;
-    &--l {
-      width: 80px;
-      height: 80px;
-      margin-top: 10px;
+    img {
+      width: 90px;
+      height: auto;
     }
   }
   &__name {

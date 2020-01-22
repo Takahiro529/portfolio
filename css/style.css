@@ -468,8 +468,6 @@ section:nth-of-type(odd) {
 }
 
 .skill__image {
-  width: 100px;
-  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,10 +477,9 @@ section:nth-of-type(odd) {
   margin: 0 auto;
 }
 
-.skill__image--l {
-  width: 80px;
-  height: 80px;
-  margin-top: 10px;
+.skill__image img {
+  width: 90px;
+  height: auto;
 }
 
 .skill__name {
