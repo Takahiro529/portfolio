@@ -568,43 +568,10 @@ section:nth-of-type(odd) {
   font-size: 1.125rem;
 }
 
-.contact form {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.contact__form-item {
-  display: flex;
-  flex-basis: 50%;
-  align-items: center;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.contact__form-item label {
-  width: 20%;
-}
-
-.contact__form-item input[type=text], .contact__form-item input[type=email], .contact__form-item input[type=subject] {
-  width: 60%;
-  padding: 3px;
-  border: 1px solid rgba(0, 140, 255, 0.6);
-  background-color: rgba(0, 0, 0, 0.01);
-}
-
-.contact__form-item textarea {
-  width: 80%;
-  height: 15em;
-  padding: 10px 3px;
-  border: 1px solid rgba(0, 140, 255, 0.6);
-  background-color: rgba(0, 0, 0, 0.01);
-}
-
-.contact__submit {
-  display: block;
-  margin: 20px auto 0;
-  border: 1px solid rgba(0, 140, 255, 0.6);
-  padding: 9px 10px;
+.contact__mail-address i {
+  font-size: 1.25rem;
+  margin-right: 5px;
+  vertical-align: bottom;
 }
 
 /* FOOTER
@@ -804,18 +771,5 @@ section:nth-of-type(odd) {
   .works__item {
     width: 48%;
     margin: 0 1% 15px;
-  }
-  .contact__form-item {
-    flex-direction: column;
-  }
-  .contact__form-item label {
-    width: 90%;
-    margin-bottom: 5px;
-  }
-  .contact__form-item input[type=text], .contact__form-item input[type=email] {
-    width: 90%;
-  }
-  .contact__form-item textarea {
-    width: 90%;
   }
 }

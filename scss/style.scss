@@ -409,52 +409,11 @@ section:nth-of-type(odd) {
     margin: 10px 0 50px;
     letter-spacing: 2px;
     font-size: rem(18);
-  }
-  form {
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  &__form-item {
-    display: flex;
-    flex-basis: 50%;
-    align-items: center;
-    margin-bottom: 20px;
-    width: 100%;
-    label {
-      width: 20%;
+    i {
+      font-size: rem(20);
+      margin-right: 5px;
+      vertical-align: bottom;
     }
-    input[type=text], input[type=email], input[type=subject] {
-      width: 60%;
-      padding: 3px;
-      border: 1px solid rgba(0, 140, 255, 0.6);
-      background-color: rgba(0, 0, 0, 0.01);
-    }
-    textarea {
-      width: 80%;
-      height: 15em;
-      padding: 10px 3px;
-      border: 1px solid rgba(0, 140, 255, 0.6);
-      background-color: rgba(0, 0, 0, 0.01);
-    }
-    @include media(s) {
-      flex-direction: column;
-      label {
-        width: 90%;
-        margin-bottom: 5px;
-      }
-      input[type=text], input[type=email] {
-        width: 90%;
-      }
-      textarea {
-        width: 90%;
-      }
-    }
-  }
-  &__submit {
-    display: block;
-    margin: 20px auto 0;
-    border: 1px solid rgba(0, 140, 255, 0.6);
-    padding: 9px 10px;
   }
 }
 
