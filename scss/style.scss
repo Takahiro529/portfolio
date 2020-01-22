@@ -78,11 +78,17 @@ section:nth-of-type(odd) {
   }
   &__nav {
     display: flex;
+    display:-webkit-box;
+  	display:-ms-flexbox;
     justify-content: space-around;
+    -ms-flex-pack: distribute;
     list-style: none;
     width: 100%;
     @include media(s) {
       flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
     }
     li {
       font-family: 'Nanum Myeongjo', serif;
@@ -299,8 +305,12 @@ section:nth-of-type(odd) {
   padding: 0 0 60px;
   &__content {
     display: flex;
+    display:-webkit-box;
+  	display:-ms-flexbox;
     justify-content: space-around;
+    -ms-flex-pack: distribute;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     margin-top: 20px;
   }
   &__item {
@@ -317,7 +327,11 @@ section:nth-of-type(odd) {
     max-width: 100px;
     max-height: 100px;
     display: flex;
+    display:-webkit-box;
+  	display:-ms-flexbox;
     justify-content: center;
+    -webkit-box-pack: center;
+	  -ms-flex-pack: center;
     margin: 0 auto;
     &--l {
       max-width: 80px;
@@ -342,10 +356,16 @@ section:nth-of-type(odd) {
   padding: 0 0 90px;
   &__content {
     display: flex;
+    display:-webkit-box;
+  	display:-ms-flexbox;
     justify-content: space-around;
+    -ms-flex-pack: distribute;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     @include media(s) {
       justify-content: left;
+      -webkit-box-pack: left;
+	    -ms-flex-pack: left;
     }
   }
   &__item {
