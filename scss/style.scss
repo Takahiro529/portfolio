@@ -77,18 +77,18 @@ section:nth-of-type(odd) {
     max-width: 800px;
   }
   &__nav {
-    display: flex;
     display:-webkit-box;
   	display:-ms-flexbox;
-    justify-content: space-around;
+    display: flex;
     -ms-flex-pack: distribute;
+    justify-content: space-around;
     list-style: none;
     width: 100%;
     @include media(s) {
-      flex-direction: column;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
+      flex-direction: column;
     }
     li {
       font-family: 'Nanum Myeongjo', serif;
@@ -304,13 +304,13 @@ section:nth-of-type(odd) {
 .skill {
   padding: 0 0 60px;
   &__content {
-    display: flex;
     display:-webkit-box;
   	display:-ms-flexbox;
-    justify-content: space-around;
+    display: flex;
     -ms-flex-pack: distribute;
-    flex-wrap: wrap;
+    justify-content: space-around;
     -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 20px;
   }
   &__item {
@@ -326,12 +326,12 @@ section:nth-of-type(odd) {
   &__image {
     max-width: 100px;
     max-height: 100px;
-    display: flex;
     display:-webkit-box;
   	display:-ms-flexbox;
-    justify-content: center;
+    display: flex;
     -webkit-box-pack: center;
 	  -ms-flex-pack: center;
+    justify-content: center;
     margin: 0 auto;
     &--l {
       max-width: 80px;
@@ -355,17 +355,17 @@ section:nth-of-type(odd) {
 .works {
   padding: 0 0 90px;
   &__content {
-    display: flex;
     display:-webkit-box;
   	display:-ms-flexbox;
-    justify-content: space-around;
+    display: flex;
     -ms-flex-pack: distribute;
-    flex-wrap: wrap;
+    justify-content: space-around;
     -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     @include media(s) {
-      justify-content: left;
       -webkit-box-pack: left;
 	    -ms-flex-pack: left;
+      justify-content: left;
     }
   }
   &__item {
