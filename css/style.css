@@ -468,8 +468,8 @@ section:nth-of-type(odd) {
 }
 
 .skill__image {
-  max-width: 100px;
-  max-height: 100px;
+  width: 100px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,8 +480,8 @@ section:nth-of-type(odd) {
 }
 
 .skill__image--l {
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
   margin-top: 10px;
 }
 
