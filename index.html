@@ -125,6 +125,25 @@
           <p class="works__description"><a href="https://isara.life/" target="_brank">isara.life</a> 模写制作LP（スマホ）</p>
           <p class="works__link">github:<a href="https://github.com/Takahiro529/mosha_isara" target="_brank"><i class="fab fa-github"></i></a></p>
         </div>
+        <div class="works__item">
+          <a href="./images/tagMemo_index.png" data-lightbox="group2" data-title="tagMemo" class="popupimg">
+            <img src="./images/tagMemo_index.png" alt="">
+          </a>
+          <div class="lightbox_group">
+            <a href="./images/tagMemo_note.png" data-lightbox="group2" data-title="" class="popupimg">
+              <img src="./images/tagMemo_note.png" alt="">
+            </a>
+          </div>
+          <div class="lightbox_group">
+            <a href="./images/tagMemo_tag.png" data-lightbox="group2" data-title="" class="popupimg">
+              <img src="./images/tagMemo_tag.png" alt="">
+            </a>
+          </div>
+          <p class="works__description">TagMemo</p>
+          <small>初めて作ったローカルアプリ。<br>タグ設定、タグ検索が
+          出来る。<br>Express使用</small>
+          <p class="works__link">github:<a href='https://github.com/Takahiro529/tag_memo' target="_brank"><i class="fab fa-github"></i></a></p>
+        </div>
       </div>
     </div><!-- /.wrapper -->
   </section><!-- /.works -->
@@ -133,7 +152,7 @@
     <p class="about__title title">ABOUT ME</p>
     <div class="about__content wrapper">
       <p>Takahiro 1991年生まれ。</p>
-      <p>28歳から独学でプログラミングの勉強を始めました。<br>
+      <p>独学でプログラミングを勉強中。<br>
       効率のいいもの、シンプルなものが好きです。</p>
     </div><!-- /.wrapper -->
   </section><!-- /.about -->
@@ -179,11 +198,11 @@
       $body.removeClass(open);
     });
     // スクロール速度
-    $('a').click(function () {
+    $('.nlist').click(function () {
       var speed = 500;
       var href = $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
+      var position = target.offset().top - 60;
       $("html, body").animate({ scrollTop: position }, speed, "swing");
       return false;
     });
