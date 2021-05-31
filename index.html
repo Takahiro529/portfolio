@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Takahiro Portfolio</title>
   <link href="./css/lightbox.css" rel="stylesheet" media="all" type="text/css" />
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
@@ -43,8 +42,8 @@
   <div class="top">
     <div class="top__content wrapper">
       <h2 class="top__text">
-        <p>Takahiro</p>
-        <p class="top__text--s">Portfolio</p>
+        <p class="load-up fade">Takahiro</p>
+        <p class="top__text--s load-up fade">Portfolio</p>
         </h2>
     </div><!-- /.wrapper -->
   </div><!-- /.top -->
@@ -54,7 +53,7 @@
       <p class="skill__title title">SKILL</p>
 
       <div class="skill__content">
-        <div class="skill__item">
+        <div class="skill__item scroll-up fade">
           <div class="skill__image">
             <img src="./images/icons8-html-5-96.png" alt="">
             <img src="./images/icons8-css3-96.png" alt="">
@@ -62,7 +61,7 @@
           <p class="skill__name">HTML/CSS</p>
           <p class="skill__txt">コーディング、レスポンシブ対応も問題ありません。<br>使用エディタはVisual Studio Codeです。</p>
         </div><!-- /.skill__item -->
-        <div class="skill__item">
+        <div class="skill__item scroll-up fade">
           <div class="skill__image">
             <img src="./images/icons8-sass-96.png" alt="">
             <img src="./images/icons8-gulp-96.png" alt="">
@@ -70,7 +69,7 @@
           <p class="skill__name">Sass/Gulp</p>
           <p class="skill__txt">基本的な機能を使いコーディング可能です。</p>
         </div><!-- /.skill__item -->
-        <div class="skill__item">
+        <div class="skill__item scroll-up fade">
           <div class="skill__image">
               <img src="./images/icons8-javascript-96.png" alt="">
               <img src="./images/icons8-jquery-100.png" alt="">
@@ -78,7 +77,7 @@
           <p class="skill__name">JavaScript/jQuery</p>
           <p class="skill__txt">アコーディオンメニューやトップへ戻るボタン等の実装など、基本的なことは一通り出来ます。</p>
         </div><!-- /.skill__item -->
-        <div class="skill__item">
+        <div class="skill__item scroll-up fade">
           <div class="skill__image">
               <img src="./images/icons8-adobe-photoshop-96.png" alt="">
               <img src="./images/icons8-xd-100.png" alt="">
@@ -86,7 +85,7 @@
           <p class="skill__name">Photoshop/XD</p>
           <p class="skill__txt">デザインカンプからのコーディングが可能です。</p>
         </div><!-- /.skill__item -->
-        <div class="skill__item">
+        <div class="skill__item scroll-up fade">
           <div class="skill__image">
               <img src="./images/icons-wordpress.png" alt="">
           </div>
@@ -104,7 +103,7 @@
       <div class="works__content">
         <div class="works__item">
           <a href="./images/portfolio.png" data-lightbox="group" data-title="ポートフォリオ" class="popupimg">
-            <img src="./images/portfolio_thumb.png" alt="">
+            <img src="./images/portfolio_thumb.png" alt="" class="scroll-up fade">
           </a>
           <p class="works__description">このサイト</p>
           <small>レスポンシブ対応/jQuery使用</small>
@@ -112,7 +111,7 @@
         </div>
         <div class="works__item">
           <a href="./images/isara_mosha.png" target="_brank">
-            <img src="./images/isara_mosha-thumb.png" alt="isara.life模写制作LP">
+            <img src="./images/isara_mosha-thumb.png" alt="isara.life模写制作LP" class="scroll-up fade">
           </a>
           <p class="works__description"><a href="https://isara.life/" target="_brank">isara.life</a> 模写制作LP</p>
           <small>レスポンシブ対応/jQuery使用</small>
@@ -120,14 +119,14 @@
         </div>
         <div class="works__item">
           <a href="./images/isara_mosha-brsp.png" target="_brank">
-            <img src="./images/isara-brsp-thumb_mosha.png" alt="isara.life模写制作LP">
+            <img src="./images/isara-brsp-thumb_mosha.png" alt="isara.life模写制作LP" class="scroll-up fade">
           </a>
           <p class="works__description"><a href="https://isara.life/" target="_brank">isara.life</a> 模写制作LP（スマホ）</p>
           <p class="works__link">github:<a href="https://github.com/Takahiro529/mosha_isara" target="_brank"><i class="fab fa-github"></i></a></p>
         </div>
         <div class="works__item">
           <a href="./images/tagMemo_index.png" data-lightbox="group2" data-title="tagMemo" class="popupimg">
-            <img src="./images/tagMemo_index.png" alt="">
+            <img src="./images/tagMemo_index.png" alt="" class="scroll-up fade">
           </a>
           <div class="lightbox_group">
             <a href="./images/tagMemo_note.png" data-lightbox="group2" data-title="" class="popupimg">
@@ -205,6 +204,45 @@
       var position = target.offset().top - 60;
       $("html, body").animate({ scrollTop: position }, speed, "swing");
       return false;
+    });
+    // $(function () {
+    // });
+    //ふわっと表示
+    //ふわっとロード
+
+    $(function () {
+      var w = $(window).width();
+      var x = 575;
+      if (w >= x) {
+        // 575px以下のときの処理
+        load_effect();
+        $(window).scroll(function () {
+          scroll_effect();
+        });
+        function load_effect() {
+          var tt = $(window).scrollTop();
+          var hh = $(window).height();
+          $('.load-up').each(function () {
+            var yy = $(this).offset().top;
+            if (tt > yy - hh) {
+              $(this).addClass('done');
+            }
+          });
+        }
+        //ふわっとスクロール
+        function scroll_effect() {
+          var tt = $(window).scrollTop();
+          var hh = $(window).height();
+          $('.scroll-up').each(function () {
+            var yy = $(this).offset().top + 100;//効果発生開始タイミングを操作したい場合は数値を変更する
+            if (tt > yy - hh) {
+              $(this).addClass('done');
+            }
+          });
+        }
+      } else {
+        $('.fade').removeClass('load-up scroll-up');
+      }
     });
   })(jQuery);
 </script>

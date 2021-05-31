@@ -364,6 +364,29 @@ section:nth-of-type(odd) {
   display: none;
 }
 
+/* ふわっと表示 */
+.scroll-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s;
+}
+
+.scroll-up.done, .scroll-fade.done {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.load-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s;
+}
+
+.load-up.done, .load-fade.done {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 /* HEADER
 ----------------------------------------*/
 .header {
@@ -375,6 +398,7 @@ section:nth-of-type(odd) {
   padding: 15px 0;
   box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
   background: #ffffff;
+  z-index: 200;
 }
 
 .header__content {
